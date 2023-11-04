@@ -1,0 +1,36 @@
+#Python-Game1
+#Rock-Paper-Scissors
+#BY Md Ibrahim Mamun, Web: https://sites.google.com/view/mdibrahimmamun/home
+
+while True:
+
+  import random
+  user_action = input("Enter a choice (rock, paper, scissors): ")
+
+  prossible_action= ["rock", "paper", "scissors"]
+  computer_action = random.choice(prossible_action)
+
+  print(f"\nYou chose {user_action}, Computer chose {computer_action}.\n")
+
+  #Wining_Condition
+
+  if user_action == computer_action:
+    print(f"Both chose Same as {user_action}. Therefore, its a TIE!")
+  elif (user_action=="rock") and (computer_action=="paper"):
+    print(f"Computer Win!!!")
+  elif (user_action=="rock") and (computer_action=="scissors"):
+    print(f"You Win! Congratulation")
+  elif (user_action=="paper") and (computer_action=="rock"):
+    print(f"You Win! Congratulation")
+  elif (user_action=="paper") and (computer_action=="scissors"):
+    print(f"Computer Win!!!")
+  elif (user_action=="scissors") and (computer_action=="paper"):
+    print(f"You Win! Congratulation")
+  else:
+    print(f"Computer Win!!!")
+
+
+  play_again = input("Want to play again? (press y/n): ")
+  if play_again != 'y':
+    break
+print("\nGame Ends. Thank you, Bye!")
